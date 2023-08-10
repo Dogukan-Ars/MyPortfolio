@@ -18,6 +18,7 @@ background-image: url(${BackgroundImage});
 height: 400vh;
 position: relative;
 display: flex;
+flex-direction: column;
 align-items: center;
 `
 
@@ -34,7 +35,6 @@ z-index: 1;
 `
 
 const Rotate = styled.span`
-display: block;
 position: fixed;
 right: 1rem;
 bottom: 1rem;
@@ -66,7 +66,7 @@ const ProjectPage = () => {
 
       const rotate = () => {
          element.style.transform = `translateX(${-window.scrollY}px)`
-         yingyang.current.style.transform = `rotate(` + -window.scrollY + 'deg)'
+         yingyang.current.style.transform = `rotate(${-window.scrollY}deg)`
       }
 
       window.addEventListener('scroll', rotate)

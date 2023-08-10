@@ -59,6 +59,16 @@ transition: all 1s ease;
    display: ${props => props.click ? "none" : "inline-block"};
    padding-top: 1rem;
 }
+
+@media (max-width: 768px) {
+   width: 140px;
+   height: 140px;
+   font-size: calc(.4em + .4vw);
+
+   &>:last-child {
+      padding-top: .5rem;
+   }
+}
 `
 
 const DarkDiv = styled.div`
@@ -73,33 +83,45 @@ z-index: 1;
 transition: height 0.5s ease, width 1s ease 0.5s;
 `
 
-const CONTACT = styled(NavLink)`
+const NavLinkStyled = styled(NavLink)`
 color: ${props => props.theme.text};
 position: absolute;
+text-decoration: none;
+z-index: 1;
+
+@media (max-width: 768px) {
+   font-size: calc(.4em + .4vw);
+}
+`
+
+const CONTACT = styled(NavLinkStyled)`
 top: 2rem;
 right: calc(1rem + 2vw);
-text-decoration: none;
-z-index: 1;
+
+@media (max-width: 768px) {
+   top: .7rem;
+}
 `
 
-const CERTIFICATE = styled(NavLink)`
-color: ${props => props.theme.text};
-position: absolute;
-top: 50%;
-right: calc(1rem + 2vw);
+const CERTIFICATE = styled(NavLinkStyled)`
+top: 54%;
+right: calc(.5rem + .5vw);
 transform:  rotate(90deg) translate(-50%, -50%);
-text-decoration: none;
-z-index: 1;
+
+@media (max-width: 768px) {
+   right: calc(-.5rem + .1vw);
+}
 `
 
-const PROJECT = styled(NavLink)`
+const PROJECT = styled(NavLinkStyled)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
-position: absolute;
 top: 50%;
 left: calc(1rem + 2vw);
 transform: translate(-50%, -50%) rotate(-90deg);
-text-decoration: none;
-z-index: 1;
+
+@media (max-width: 768px) {
+   left: calc(.5rem + 1vw);
+}
 `
 
 const BottomBar = styled.div`
@@ -108,21 +130,25 @@ bottom: 1rem;
 left: 0;
 right: 0;
 width: 100%;
-
 display: flex;
 justify-content: space-evenly;
 `
 
-const ABOUT = styled(NavLink)`
+const ABOUT = styled(NavLinkStyled)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
-text-decoration: none;
-z-index: 1;
+position: relative;
+
+@media (max-width: 768px) {
+   top: calc(.5rem + 1vw);
+}
 `
 
-const SKILLS = styled(NavLink)`
-color: ${props => props.theme.text};
-text-decoration: none;
-z-index: 1;
+const SKILLS = styled(NavLinkStyled)`
+position: relative;
+
+@media (max-width: 768px) {
+   top: calc(.5rem + 1vw);
+}
 `
 
 const Main = () => {
@@ -140,7 +166,7 @@ const Main = () => {
             <SocialIcons theme={click ? 'dark' : 'light'} />
 
             <Center click={click}>
-               <YinYang onClick={() => handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
+               <YinYang onClick={() => handleClick()} width={click ? 90 : 200} height={click ? 90 : 200} fill='currentColor' />
                <span>click here</span>
             </Center>
 

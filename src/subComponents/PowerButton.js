@@ -15,8 +15,8 @@ background-color: #FCF6F4;
 padding: 0.3rem;
 border-radius: 50%;
 border: 1px solid #000;
-width: 2.5rem;
-height: 2.5rem;
+width: 2.7rem;
+height: 2.7rem;
 
 display: flex;
 justify-content: center;
@@ -25,7 +25,8 @@ z-index: 3;
 cursor: pointer;
 
 &:hover {
-   box-shadow: 0 2px 14px 18px rgba(102, 119, 136,0.5);
+   box-shadow: 0 2px 14px 18px rgba(160, 160, 160, 0.5);
+   background-color: rgba(160, 160, 160, 0.5);
 }
 
 &>*:first-child {
@@ -33,13 +34,33 @@ cursor: pointer;
    color: inherit;
 }
 
+&>*:last-child {
+   width: 100%;
+   height: auto;
+}
+
+@media (max-width: 768px) {
+   width: 1.6rem;
+   height: 1.6rem;
+   padding: 0.2rem;
+   top: 1rem;
+   
+   &>*:last-child{
+      position: fixed;
+      top: 1px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 1.2rem;
+      height: 1.2rem;
+   }
+}
 `
 
 const PowerButton = () => {
    return (
       <Power>
          <NavLink to="/">
-            <PowerBtn width={30} height={30} fill="currentColor" />
+            <PowerBtn fill="currentColor" />
          </NavLink>
       </Power>
    )

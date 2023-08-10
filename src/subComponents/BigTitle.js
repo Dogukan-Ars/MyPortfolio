@@ -1,4 +1,3 @@
-import React from 'react'
 import { styled } from 'styled-components'
 
 
@@ -11,6 +10,10 @@ color: ${props => `rgba(${props.theme.textRgba}, 0.1)`};
 font-size: calc(5rem + 5vw);
 user-select: none;
 z-index: 0;
+
+@media (max-width: 768px) {
+   font-size: calc(3rem + 4vw);
+}
 `
 
 const BigTitle = (props) => {

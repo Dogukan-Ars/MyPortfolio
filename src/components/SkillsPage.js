@@ -15,99 +15,69 @@ body {
    margin: 0;
    padding: 0;
    overflow: hidden;
+   background-color: ${props => props.theme.body};
 }
 `
 
 const IconBox = styled(motion.div)`
-&>*:nth-child(1) {
+&>*:nth-child(n) {
    position: absolute;
-   top: 3%;
-   left: 5%;
    opacity: 0.4;
    z-index: 1;
+   width: 150px;
+   height: 150px;
 }
-&>*:nth-child(1):hover {
+
+&>*:nth-child(n):hover {
    opacity: 1;
    transition: opacity 0.4s ease-in-out;
+}
+
+&>*:nth-child(1) {
+   top: 3%;
+   left: 5%;
 }
 
 &>*:nth-child(2) {
-   position: absolute;
    top: 3%;
    left: 85%;
-   opacity: 0.4;
-   z-index: 1;
-}
-&>*:nth-child(2):hover {
-   opacity: 1;
-   transition: opacity 0.4s ease-in-out;
 }
 
 &>*:nth-child(3) {
-   position: absolute;
    top: 3%;
    left: 60%;
-   opacity: 0.4;
-   z-index: 1;
-}
-&>*:nth-child(3):hover {
-   opacity: 1;
-   transition: opacity 0.4s ease-in-out;
 }
 
 &>*:nth-child(4) {
-   position: absolute;
    top: 85%;
    left: 60%;
-   opacity: 0.4;
-   z-index: 1;
-}
-&>*:nth-child(4):hover {
-   opacity: 1;
-   transition: opacity 0.4s ease-in-out;
 }
 
 &>*:nth-child(5) {
-   position: absolute;
    top: 85%;
    left: 30%;
-   opacity: 0.4;
    transform: rotate(10deg);
-   z-index: 1;
 }
 &>*:nth-child(5):hover {
    opacity: 0.8;
-   transition: opacity 0.4s ease-in-out;
 }
 
 &>*:nth-child(6) {
-   position: absolute;
    top: 30%;
    left: 5%;
    transform: rotate(30deg);
-   opacity: 0.4;
-   z-index: 1;
-}
-&>*:nth-child(6):hover {
-   opacity: 1;
-   transition: opacity 0.4s ease-in-out;
 }
 
 &>*:nth-child(7) {
-   position: absolute;
    top: 60%;
    left: 5%;
    transform: rotate(30deg);
-   opacity: 0.4;
-   z-index: 1;
 }
 &>*:nth-child(7):hover {
    opacity: 0.8;
-   transition: opacity 0.4s ease-in-out;
 }
 
 &>*:nth-child(8) {
-   position: absolute;
    top: -20%;
    left: -15%;
    opacity: 0.1;
@@ -117,42 +87,54 @@ const IconBox = styled(motion.div)`
 }
 &>*:nth-child(8):hover {
    opacity: 0.3;
-   transition: opacity 0.4s ease-in-out;
 }
 
 &>*:nth-child(9) {
-   position: absolute;
    top: 85%;
    left: 5%;
-   opacity: 0.4;
-}
-&>*:nth-child(9):hover {
-   opacity: 1;
-   transition: opacity 0.4s ease-in-out;
 }
 
 &>*:nth-child(10) {
-   position: absolute;
    top: 3%;
    left: 30%;
-   opacity: 0.4;
 }
 &>*:nth-child(10):hover {
    opacity: 0.8;
-   transition: opacity 0.4s ease-in-out;
 }
 
 &>*:nth-child(11) {
-   position: absolute;
    top: 85%;
    left: 85%;
-   opacity: 0.4;
-}
-&>*:nth-child(11):hover {
-   opacity: 1;
-   transition: opacity 0.4s ease-in-out;
 }
 
+@media (max-width: 768px) {
+   &>*:nth-child(n) {
+      position: absolute;
+      opacity: 0.4;
+      margin-top: 1rem;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+   }
+
+   &>*:nth-child(n):hover {
+      opacity: 0.7;
+      transition: opacity 0.4s ease-in-out;
+   }
+
+   &>*:nth-child(8) {
+      top: 5%;
+      left: 15%;
+      opacity: 0.1;
+      width: 75vw;
+      height: 100vh;
+      z-index: 0;
+   }
+   &>*:nth-child(8):hover {
+      opacity: 0.3;
+      transition: opacity 0.4s ease-in-out;
+   }
+}
 `
 
 const Box = styled.div`
@@ -163,6 +145,11 @@ position: relative;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
+
+@media (max-width: 768px) {
+   width: 100%;
+   height: 95vh;
+}
 `
 
 const Main = styled.div`
@@ -170,7 +157,8 @@ background-color: ${props => props.theme.body};
 color: ${props => props.theme.text};
 border: 2px solid ${props => props.theme.text};
 padding: 2rem;
-width: 30vw;
+width: 30%;
+max-width: 500px;
 height: 60vh;
 z-index: 3;
 line-height: 1.5;
@@ -180,10 +168,16 @@ font-family: 'Ubuntu Mono', monospace;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+margin-top: 2rem;
 
 &:hover {
    color: ${props => props.theme.body};
    background-color: ${props => props.theme.text};
+}
+
+@media (max-width: 768px) {
+   width: 25%;
+   padding: 1.2rem;
 }
 `
 
@@ -202,6 +196,10 @@ ${Main}:hover &{
 &>*:first-child {
    margin-right: 1rem;
 }
+
+@media (max-width: 768px) {
+   font-size: calc(.7em + .8vw);
+}
 `
 
 const Description = styled.div`
@@ -219,6 +217,15 @@ ul, p {
 
 ${Main}:hover &{
    color: ${props => props.theme.body};
+}
+
+@media (max-width: 768px) {
+   padding: 0.2rem 0;
+   font-size: calc(.5em + .7vw);
+
+   ul, p {
+      margin-left: 1rem;
+   }
 }
 `
 
@@ -247,7 +254,7 @@ const SkillsPage = () => {
                   <IconBox>
                      {
                         Icon.map((data) => (
-                           <IconComponent key={data.id} src={data.imgSrc} size={150} />
+                           <IconComponent key={data.id} src={data.imgSrc} />
                         ))}
                   </IconBox>
                </motion.div>

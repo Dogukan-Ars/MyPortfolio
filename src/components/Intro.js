@@ -10,9 +10,10 @@ left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
 
-width: 65vw;
+width: 65%;
 height: 55vh;
 display: flex;
+
 
 background: linear-gradient(
    to right,
@@ -28,6 +29,11 @@ background-size: 100% 2px;
 border-left: 2px solid ${props => props.theme.body};
 border-right: 2px solid ${props => props.theme.text};
 z-index: 1;
+
+@media (max-width: 768px) {
+   width: 60%;
+   height: 50vh;
+}
 `
 
 const SubBox = styled.div`
@@ -43,6 +49,26 @@ display: flex;
    width: 100%;
    height: auto;
 }
+
+@media (max-width: 768px) {
+   min-height: 25vh;
+   padding: .1rem;
+   font-size: calc(.3em + .5vw);
+
+   h1, h3 {
+      margin-top: 1rem;
+   }
+   h6 {
+      margin-bottom: .5rem;
+   }
+   &>*:last-child{
+      font-size: calc(0.4rem + .8vw);
+   }
+}
+
+@media (max-width: 1024px) {
+   min-height: 30vh;
+}
 `
 
 const Text = styled.div`
@@ -55,10 +81,31 @@ display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 
+h1, h3 {
+   margin-bottom: 4rem;
+}
+h6 {
+   margin-bottom: 2rem;
+}
 &>*:last-child{
    color: ${props => `rgba(${props.theme.bodyRgba}, 0.6)`};
    font-size: calc(0.5rem + 1.5vw);
    font-weight: 300;
+}
+@media (max-width: 1024px) {
+   padding: 1rem;
+   font-size: calc(.7em + 1vw);
+
+   h1, h3 {
+      margin-top: .5rem;
+      margin-bottom: 1rem;
+   }
+   h6 {
+      margin-bottom: .5rem;
+   }
+   &>*:last-child{
+      font-size: calc(0.4rem + .8vw);
+   }
 }
 `
 
@@ -73,7 +120,7 @@ const Intro = () => {
    return (
       <Box
          initial={{ height: 0 }}
-         animate={{ height: '55vh' }}
+         animate={{ height: 'auto' }}
          transition={{ type: 'spring', duration: 2, delay: 1 }}
       >
          <SubBox>

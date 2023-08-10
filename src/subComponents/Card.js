@@ -24,11 +24,21 @@ cursor: pointer;
    color:  ${props => props.theme.text};
    border: 1px solid ${props => props.theme.text};
 }
+
+@media (max-width: 768px) {
+   width: 40vw;
+   margin: 0;
+   margin-right: 4rem;
+}
 `
 
 const Title = styled.h2`
 font-size:calc(1em + 0.5vw);
 margin-bottom: 0.5rem;
+
+@media (max-width: 768px) {
+   font-size: calc(1.2em + 1vw);
+}
 `
 
 const Images = styled.div`
@@ -43,6 +53,10 @@ border-radius: 0 40px 0 40px;
 ${Box}:hover &{
    border: 1px solid ${props => props.theme.body};
 }
+
+@media (max-width: 768px) {
+   height: 60%;
+}
 `
 
 const Description = styled.h2`
@@ -50,6 +64,10 @@ font-size:calc(0.6em + 0.3vw);
 font-family: 'Karla', sans-serif;
 font-weight: 500;
 margin-top: .6rem;
+
+@media (max-width: 768px) {
+   display: none;
+}
 `
 
 const Tags = styled.div`
@@ -62,12 +80,20 @@ flex-wrap: wrap;
 ${Box}:hover &{
    border-top: 2px solid ${props => props.theme.text};
 }
+
+@media (max-width: 768px) {
+   margin: 0.6rem 0;
+}
 `
 
 const Tag = styled.span`
 margin-right: 1rem;
 font-size: calc(0.5em + 0.3vw);
 font-weight: 600;
+
+@media (max-width: 768px) {
+   font-size: calc(0.7em + 0.5vw);
+}
 `
 
 const Footer = styled.footer`
@@ -86,6 +112,11 @@ font-size: calc(1em + 0.5vw);
 ${Box}:hover &{
    background-color: ${props => props.theme.text};
    color: ${props => props.theme.body};
+}
+
+@media (max-width: 768px) {
+   padding: 0.5rem calc(4.4rem + 2.4vw);
+   font-size: calc(.7em + 0.5vw);
 }
 `
 

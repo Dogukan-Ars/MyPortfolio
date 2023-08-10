@@ -9,22 +9,39 @@ const Icons = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+justify-content: space-around;
 
 position: fixed;
 bottom: 0;
 left: 2rem;
-
 z-index: 3;
 
 &>*:not(:last-child) {
    margin: 0.5rem 0;
 }
+
+@media (max-width: 768px) {
+   margin: 0 .2rem;
+
+   &>*:not(:last-child) {
+      margin: 0.1rem 0;
+   }
+
+   a>*:last-child {
+      width: 15px;
+      height: 15px;
+   }
+}
 `
 
 const Line = styled(motion.span)`
 width: 2px;
-height: 8rem;
+max-height: 7rem;
 background-color: ${props => props.color === 'dark' ? darkTheme.text : darkTheme.body};
+
+@media (max-width: 768px) {
+   max-height: 1.6rem;
+}
 `
 
 const SocialIcons = (props) => {

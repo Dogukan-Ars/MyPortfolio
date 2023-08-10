@@ -6,7 +6,7 @@ import CertificateComponent from "../subComponents/CertificateComponent"
 import LogoComponent from "../subComponents/LogoComponent"
 import PowerButton from "../subComponents/PowerButton"
 import SocialIcons from "../subComponents/SocialIcons"
-import RopeComponent from "../subComponents/Tassel"
+import RopeComponent from "../subComponents/RopeComponent"
 import BigTitle from "../subComponents/BigTitle"
 import img from "../assets/Images/LifeCycle.jpg"
 
@@ -15,8 +15,7 @@ background-image: url(${img});
 background-color: rgba(0, 0, 0, 0.5);
 background-size: cover;
 background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center;
+background-position: center;,
 `
 
 
@@ -32,12 +31,16 @@ const Center = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-padding-top: 10rem;
+padding: 10rem 2rem;
+
+@media (max-width: 768px) {
+   padding: 5rem 2rem;
+}
 `
 
 const Grid = styled.div`
 display: grid;
-grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
+grid-template-columns: repeat(auto-fill, minmax(calc(10rem + 15vw), 1fr));
 grid-gap: calc(1rem + 2vw);
 z-index: 2;
 `

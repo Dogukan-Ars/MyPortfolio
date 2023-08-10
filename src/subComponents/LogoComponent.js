@@ -11,7 +11,13 @@ position: fixed;
 left: 2rem;
 top: 2rem;
 z-index: 3;
+font-size: calc(2rem + 1vw);
 
+@media (max-width: 768px) {
+  font-size: calc(1rem + 1vw);
+  left: 1rem;
+  top: .7rem;
+}
 `
 
 const LogoComponent = (props) => {

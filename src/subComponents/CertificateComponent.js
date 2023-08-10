@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { styled } from 'styled-components'
 
@@ -23,18 +22,28 @@ z-index: 2;
    background-color: ${props => props.theme.text};
    transition: all 0.3s ease;
 }
+
+@media (max-width: 768px) {
+   display: grid;
+   grid-auto-rows: calc(6rem + 5vw);
+   min-height: 35vh;
+}
 `
 
 const Image = styled.div`
 background-image: ${props => `url(${props.img})`};
 width: 100%;
-height: 60%;
+height: 70%;
 background-size: cover;
 border: 1px solid transparent;
 background-position: center center;
 
 ${Box}:hover &{
    border: 1px solid ${props => props.theme.body};
+}
+
+@media (max-width: 768px) {
+   height: 100%;
 }
 `
 
@@ -49,6 +58,11 @@ border-bottom: 1px solid ${props => props.theme.text};
 ${Box}:hover &{
    border-bottom: 1px solid ${props => props.theme.body};
 }
+
+@media (max-width: 768px) {
+   font-size: calc(.8em + .7vw);
+   max-height: 3rem;
+}
 `
 
 const HashTags = styled.div`
@@ -56,18 +70,47 @@ padding: 0.5rem 0;
 display: flex;
 flex-wrap: wrap;
 max-height: 1rem;
+
+@media (max-width: 768px) {
+   margin-top: -2rem;
+   max-height: 2rem;
+}
 `
 
 const Tag = styled.span`
 padding-right: 0.5rem;
+
+@media (max-width: 768px) {
+   font-size: calc(.6em + .6vw);
+}
 `
 
 const Date = styled.span`
 padding: 0.5rem 0;
+height: 2rem;
 margin-top: 1rem;
+
+@media (max-width: 768px) {
+   height: 1rem;
+   margin-top: -6rem;
+}
 `
 
 const Container = styled(motion.div)`
+display: grid;
+grid-template-columns: repeat(2, 2fr);
+justify-content: center;
+align-items: center;
+gap: 2rem;
+
+@media (max-width: 768px) {
+   display: grid;
+   grid-auto-rows: calc(22rem + 8vw);
+   min-height: 40vh;
+   margin-left: 25%;
+   margin-bottom: 7%;
+   column-gap: 5rem;
+}
 `
 
 // Framer-motion configuration
@@ -94,7 +137,7 @@ const CertificateComponent = (props) => {
       >
          <Box to={link} target="_blank">
             <Image img={imgSrc} />
-            <Title style={{ color: "inherit", textDecoration: "none"}}>{name}</Title>
+            <Title>{name}</Title>
             <HashTags>
                {
                   tags.map((t, id) => {
@@ -102,9 +145,7 @@ const CertificateComponent = (props) => {
                   })
                }
             </HashTags>
-            <Date>
-               {date}
-            </Date>
+            <Date>{date}</Date>
          </Box>
       </Container>
    )

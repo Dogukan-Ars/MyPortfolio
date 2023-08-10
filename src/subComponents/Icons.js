@@ -11,9 +11,14 @@ const IconBox = styled.div`
   align-items: center;
   transition: background-color 0.3s ease;
 
-  &:hover {
-    /* Add hover styles if needed */
-  }
+&:hover {
+  /* Add hover styles if needed */
+}
+
+@media (max-width: 768px) {
+  width: ${props => props.size * 0.8}px; /* Adjust width for smaller screens */
+  height: ${props => props.size * 0.8}px; /* Adjust height for smaller screens */
+}
 `;
 
 const IconComponent = ({ src, size }) => {

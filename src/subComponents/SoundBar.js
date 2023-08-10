@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { keyframes, styled } from 'styled-components'
-import music from "../assets/audio/Kreisler-Rachmaninoff-Liebesleid.mp3"
+import music from "../assets/audio/ShiroSagisu-FiestaDeGuerra.mp3"
 
 const Box = styled.div`
 display: flex;
@@ -8,7 +8,7 @@ cursor: pointer;
 position: fixed;
 left: 8rem;
 top: 3rem;
-z-index: 10;
+z-index: 3;
 
 &>*:nth-child(1) {
   animation-delay: 0.2s;
@@ -24,6 +24,11 @@ z-index: 10;
 }
 &>*:nth-child(5) {
   animation-delay: 0.8s;
+}
+
+@media (max-width: 768px) {
+  top: 1.2rem;
+  left: 4rem;
 }
 `
 
@@ -48,6 +53,12 @@ animation-play-state: ${props => props.click ? "running" : "paused"};
 height: 1rem;
 width: 2px;
 margin: 0 0.1rem;
+
+@media (max-width: 768px) {
+  height: .5rem;
+  width: 1px;
+  margin: 0 .5px;
+}
 `
 
 

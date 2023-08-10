@@ -32,9 +32,14 @@ animation: ${float} 4s ease infinite;
 z-index: 2;
 
 img {
-   width: 100%;
-   height: auto;
+   max-width: 100%;
    transform: rotate(-20deg);
+}
+
+@media (max-width: 768px) {
+   width: 10vw;
+   top: 12%;
+   right: 10%;
 }
 `
 
@@ -46,6 +51,7 @@ width: 50%;
 min-height: 60vh;
 z-index: 2;
 line-height: 1.5;
+overflow: auto;
 
 display: flex;
 justify-content: center;
@@ -54,10 +60,18 @@ font-size: calc(0.6rem + 1vw);
 backdrop-filter: blur(4px);
 
 position: absolute;
-left: calc(10rem + 5vw);
+left: calc(7rem + 5vw);
 top: 10rem;
 font-family: 'Ubuntu Mono', monospace;
 font-style: italic;
+
+@media (max-width: 768px) {
+   width: 55%;
+   font-size: calc(0.7rem + .8vw);
+   padding: 1rem;
+   top: 6rem;
+   left: calc(4rem + 3vw);
+}
 `
 
 const Piano = styled.div`
@@ -66,18 +80,27 @@ background-repeat: no-repeat;
 background-attachment: fixed;
 position: absolute;
 top: 5%;
-left: 5%;
+left: 0;
+width: 90vw;
+height: 40vh;
 z-index: -1;
 filter: blur(3px);
+
+@media (max-width: 768px) {
+   position: absolute;
+   top: 40rem;
+   right: 70rem;
+   border: 1px solid red;
+}
 `
 
 const AboutPage = () => {
    return (
       <ThemeProvider theme={darkTheme} >
 
-            <LogoComponent theme='dark' />
-            <SocialIcons theme='dark' />
-            <PowerButton />
+         <LogoComponent theme='dark' />
+         <SocialIcons theme='dark' />
+         <PowerButton />
          <Box>
 
             <King>
@@ -101,9 +124,10 @@ const AboutPage = () => {
             <Piano>
                <img src={piano} alt="Piano" />
             </Piano>
-         </Box>
-      </ThemeProvider>
 
+         </Box>
+
+      </ThemeProvider>
    )
 }
 
