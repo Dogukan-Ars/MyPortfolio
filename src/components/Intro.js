@@ -2,6 +2,7 @@ import { styled } from 'styled-components'
 import { motion } from 'framer-motion'
 import Me from "../assets/Images/Profile-photo.png"
 import Typewriter from 'typewriter-effect'
+import NavigationMenuIcons from '../subComponents/NavigationMenuIcons'
 
 
 const Box = styled(motion.div)`
@@ -118,6 +119,8 @@ const stringsToRender = [
 
 const Intro = () => {
    return (
+      <>
+         <NavigationMenuIcons theme='light' />
       <Box
          initial={{ height: 0 }}
          animate={{ height: 'auto' }}
@@ -153,6 +156,7 @@ const Intro = () => {
             </motion.div>
          </SubBox>
       </Box>
+      </>
    )
 }
 

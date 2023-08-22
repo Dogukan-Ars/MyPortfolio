@@ -10,37 +10,62 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
-
+margin: 0 -.4rem;
 position: fixed;
 bottom: 0;
 left: 2rem;
 z-index: 3;
 
 &>*:not(:last-child) {
-   margin: 0.5rem 0;
+   margin: 0.3rem 0;
+}
+&>*>a>:nth-child(n):hover {
+  transform: scale(1.3);
 }
 
-@media (max-width: 768px) {
-   margin: 0 .2rem;
+a>*:last-child {
+   width: 2rem;
+   height: 2rem;
+}
+
+@media (max-width: 640px) {
+   margin: 0 -.4rem;
 
    &>*:not(:last-child) {
       margin: 0.1rem 0;
    }
 
    a>*:last-child {
-      width: 15px;
-      height: 15px;
+      width: 1.3rem;
+      height: 1.3rem;
+   }
+}
+
+@media (min-width: 1024px) {
+   margin: 0 .5rem;
+
+   &>*:not(:last-child) {
+      margin: 0.5rem 0;
+   }
+
+   a>*:last-child {
+      width: 2.3rem;
+      height: 2.3rem;
    }
 }
 `
 
 const Line = styled(motion.span)`
 width: 2px;
-max-height: 7rem;
+max-height: 2.6rem;
 background-color: ${props => props.color === 'dark' ? darkTheme.text : darkTheme.body};
 
-@media (max-width: 768px) {
-   max-height: 1.6rem;
+@media (max-width: 640px) {
+   max-height: 2.2rem;
+}
+
+@media (min-width: 1024px) {
+   max-height: 4rem;
 }
 `
 

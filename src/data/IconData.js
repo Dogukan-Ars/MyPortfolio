@@ -1,5 +1,5 @@
 import Html from "../assets/Images/Html-5-150.png"
-import Css from "../assets/Images/Css3-150.png"
+import Css from "../assets/Images/Css-150.png"
 import Bootstrap from "../assets/Images/Bootstrap-150.png"
 import Sass from "../assets/Images/Sass-150.png"
 import Jquery from "../assets/Images/Jquery-150.png"
@@ -8,7 +8,8 @@ import Typescript from "../assets/Images/Typescript-150.png"
 import Java from "../assets/Images/Java-150.png"
 import Git from "../assets/Images/Git-150.png"
 import Figma from "../assets/Images/Figma-150.png"
-import React from "../assets/Images/React-1600.png"
+import React from "../assets/Images/React-150.png"
+import VsCode from "../assets/Images/Vs-code-150.png"
 
 export const Icon = [
    {
@@ -65,5 +66,10 @@ export const Icon = [
       id: 11,
       name: "Figma",
       imgSrc: Figma
+   },
+   {
+      id: 12,
+      name: "VS Code",
+      imgSrc: VsCode
    },
 ]

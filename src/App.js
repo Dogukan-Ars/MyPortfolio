@@ -9,8 +9,8 @@ import CertificatePage from "./components/CertificatePage"
 import ProjectPage from "./components/ProjectPage"
 import SkillsPage from "./components/SkillsPage"
 import { AnimatePresence } from "framer-motion";
-import SoundBar from "./subComponents/SoundBar";
 import ContactPage from "./components/ContactPage";
+import SkillsPageAlt from "./components/SkillsPage";
 
 function App() {
   const location = useLocation();
@@ -21,8 +21,6 @@ function App() {
 
       <ThemeProvider theme={lightTheme}>
 
-        <SoundBar />
-
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route exact path="/" Component={Main} />
@@ -30,6 +28,7 @@ function App() {
             <Route exact path="/certificate" Component={CertificatePage} />
             <Route exact path="/project" Component={ProjectPage} />
             <Route exact path="/skills" Component={SkillsPage} />
+            <Route exact path="/skillspagealt" Component={SkillsPageAlt} />
             <Route exact path="/contact" Component={ContactPage} />
           </Routes>
         </AnimatePresence>

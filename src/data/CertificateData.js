@@ -1,3 +1,4 @@
+import react from "../assets/Images/FrontendDevelopmentLibraries.png"
 import js from "../assets/Images/JavaScriptCertificate.png"
 import html from "../assets/Images/HTML.png"
 import java from "../assets/Images/AdvancedJava.png"
@@ -5,6 +6,14 @@ import java from "../assets/Images/AdvancedJava.png"
 export const Certificate = [
     {
         id: 1,
+        name: "Frontend Development Libraries (React-Redux)",
+        tags: ["react", "redux", "bootstrap", "jquery", "sass"],
+        date: "14 August, 2023",
+        imgSrc: react,
+        link: "https://www.freecodecamp.org/certification/Drynwhyl/front-end-development-libraries"
+    },
+    {
+        id: 2,
         name: "JavaScript Algorithms and Data Structures",
         tags: ["javascript", "es6", "debugging", "regex", "oop", "algorithmScripting"],
         date: "1 May, 2023",

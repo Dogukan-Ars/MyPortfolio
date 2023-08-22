@@ -3,6 +3,7 @@ import markdown from "../assets/Images/MarkdownPrev.png"
 import drummac from "../assets/Images/DrumMachine.png"
 import toDo from "../assets/Images/ToDo.png"
 import shoplist from "../assets/Images/ShoppingList.png"
+import getir from "../assets/Images/Getir-Clone.png"
 
 export const Project = [
     {
@@ -50,5 +51,14 @@ export const Project = [
         img: shoplist,
         demo: "https://dogu-shopping-list.netlify.app/",
         github: "https://github.com/Drynwhyll/Shopping-List-App"
+    },
+    {
+        id: 6,
+        name: "Getir Clone Web Page",
+        description: "It built with React and Tailwind.",
+        tags: ["react", "tailwindcss", "react-components"],
+        img: getir,
+        demo: "https://dogu-getir-clone.netlify.app/",
+        github: "https://github.com/Drynwhyll/Getir-Clone"
     },
 ] 

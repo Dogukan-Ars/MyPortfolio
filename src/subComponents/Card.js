@@ -8,115 +8,167 @@ const Box = styled(motion.li)`
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-padding: 1.5rem 2rem;
-margin-right: 8rem;
-width: 16rem;
-height: 100%;
+width: 30vw;
+height: 90%;
+padding: 1.2rem 1.3rem;
+margin: -8rem 5rem 0 0;
 color:  ${props => props.theme.body};
 background-color: ${props => props.theme.text};
 border-radius: 0 40px 0 40px;
-border: 1px solid ${props => props.theme.body};
 transition: all 0.2s ease;
 cursor: pointer;
 
 &:hover {
    background-color: ${props => props.theme.body};
    color:  ${props => props.theme.text};
-   border: 1px solid ${props => props.theme.text};
 }
 
-@media (max-width: 768px) {
-   width: 40vw;
-   margin: 0;
-   margin-right: 4rem;
+@media (max-width: 640px) {
+   width: 35vw;
+   height: 90%;
+   padding: 1rem 1rem;
+   margin: -8rem 4rem 0 0;
+   border-radius: 0 30px 0 30px;
+}
+
+@media (min-width: 1024px) {
+   padding: 2rem 1.6rem;
+   margin: 1rem 6rem 0 0;
+   height: 50vh;
+   width: 22vw;
 }
 `
 
 const Title = styled.h2`
-font-size:calc(1em + 0.5vw);
+font-size: calc(.8em + .7vw);
 margin-bottom: 0.5rem;
 
-@media (max-width: 768px) {
-   font-size: calc(1.2em + 1vw);
+@media (max-width: 640px) {
+   font-size: calc(.7em + .6vw);
+}
+
+@media (min-width: 1024px) {
+   font-size:calc(1em + 0.5vw);
 }
 `
 
 const Images = styled.div`
 background-image: ${props => `url(${props.img})`};
-width: 100%;
-height: 90%;
-background-size: cover;
-border: 1px solid transparent;
 background-position: center center;
-border-radius: 0 40px 0 40px;
+background-size: cover;
+width: 100%;
+height: 100%;
+border: 1px solid transparent;
+border-radius: 0 30px 0 30px;
 
 ${Box}:hover &{
    border: 1px solid ${props => props.theme.body};
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
+   border-radius: 0 20px 0 20px;
    height: 60%;
+
+   ${Box}:hover &{
+      border: .4px solid ${props => props.theme.body};
+   }
+}
+
+@media (min-width: 1024px) {
+   border-radius: 0 40px 0 40px;
+   height: 90%;
+
+   ${Box}:hover &{
+      border: 1px solid ${props => props.theme.body};
+   }
 }
 `
 
 const Description = styled.h2`
-font-size:calc(0.6em + 0.3vw);
+font-size:calc(0.7em + 0.4vw);
 font-family: 'Karla', sans-serif;
 font-weight: 500;
 margin-top: .6rem;
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
    display: none;
+}
+
+@media (min-width: 1024px) {
+   font-size:calc(0.7em + 0.4vw);
 }
 `
 
 const Tags = styled.div`
-border-top: 2px solid ${props => props.theme.body};
-padding-top: 0.2rem;
-margin: 0.6rem 0;
+border-top: 1px solid ${props => props.theme.body};
+padding-top: 0.4rem;
 display: flex;
 flex-wrap: wrap;
 
-${Box}:hover &{
-   border-top: 2px solid ${props => props.theme.text};
+&{
+   margin: .7rem 0;
 }
 
-@media (max-width: 768px) {
-   margin: 0.6rem 0;
+${Box}:hover &{
+   border-top: 1px solid ${props => props.theme.text};
+}
+
+@media (max-width: 640px) {
+   border-top: 1px solid ${props => props.theme.body};
+
+   ${Box}:hover &{
+      border-top: 1px solid ${props => props.theme.text};
+   }
+}
+
+@media (min-width: 1024px) {
+   border-top: 2px solid ${props => props.theme.body};
+
+   ${Box}:hover &{
+      border-top: 2px solid ${props => props.theme.text};
+   }
 }
 `
 
 const Tag = styled.span`
-margin-right: 1rem;
-font-size: calc(0.5em + 0.3vw);
+margin-right: .6rem;
+font-size: calc(0.5em + 0.5vw);
 font-weight: 600;
 
-@media (max-width: 768px) {
-   font-size: calc(0.7em + 0.5vw);
+@media (max-width: 640px) {
+   font-size: calc(.6em + .6vw)
 }
 `
 
 const Footer = styled.footer`
 display: flex;
 justify-content: space-between;
+align-items: center;
 `
 
 const Link = styled(NavLink)`
 background-color: ${props => props.theme.body};
 color: ${props => props.theme.text};
 text-decoration: none;
-padding: 0.2rem calc(.5rem + 1vw);
-border-radius: 0 0 0 40px;
-font-size: calc(1em + 0.5vw);
+padding: 0.5rem calc(1.9rem + 1.8vw);
+font-size: calc(.8em + 0.6vw);
+border-radius: 0 0 0 30px;
 
 ${Box}:hover &{
    background-color: ${props => props.theme.text};
    color: ${props => props.theme.body};
 }
 
-@media (max-width: 768px) {
-   padding: 0.5rem calc(4.4rem + 2.4vw);
+@media (max-width: 640px) {
+   padding: 0.4rem calc(.9rem + .8vw);
    font-size: calc(.7em + 0.5vw);
+   border-radius: 0 0 0 20px;
+}
+
+@media (min-width: 1024px) {
+   padding: 0.6rem calc(1.9rem + 1.8vw);
+   font-size: calc(.8em + 0.6vw);
+   border-radius: 0 0 0 40px;
 }
 `
 

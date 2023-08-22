@@ -7,12 +7,16 @@ top: ${props => props.top};
 left: ${props => props.left};
 right: ${props => props.right};
 color: ${props => `rgba(${props.theme.textRgba}, 0.1)`};
-font-size: calc(5rem + 5vw);
+font-size: calc(3rem + 3.5vw);
 user-select: none;
 z-index: 0;
 
-@media (max-width: 768px) {
-   font-size: calc(3rem + 4vw);
+@media (max-width: 640px) {
+   font-size: calc(1.5rem + 3vw);
+}
+
+@media (min-width: 1024px) {
+   font-size: calc(5rem + 5vw);
 }
 `
 

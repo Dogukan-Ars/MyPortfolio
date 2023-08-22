@@ -5,16 +5,23 @@ import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons from '../subComponents/SocialIcons'
 import PowerButton from '../subComponents/PowerButton'
 import king from "../assets/Images/King.png"
-import piano from "../assets/Images/Piano.jpg"
 import BigTitle from '../subComponents/BigTitle'
+import NavigationMenuIcons from '../subComponents/NavigationMenuIcons'
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
+background-size: cover;
 width: 100vw;
-height: 100vh;
-position: relative;
+min-height: 110vh;
 overflow: hidden;
 z-index: -1;
+
+@media (max-width: 640px) {
+   min-height: 110vh;
+}
+@media (min-width: 1024px) {
+   min-height: 110vh;
+}
 `
 
 const float = keyframes`
@@ -25,72 +32,67 @@ const float = keyframes`
 
 const King = styled.div`
 position: absolute;
-top: 8%;
-right: 15%;
-width: 7vw;
+width: 6vw;
+bottom: 10%;
+right: 10%;
 animation: ${float} 4s ease infinite;
-z-index: 2;
+z-index: 1;
 
 img {
    max-width: 100%;
-   transform: rotate(-20deg);
+   transform: rotate(20deg);
 }
 
-@media (max-width: 768px) {
-   width: 10vw;
-   top: 12%;
-   right: 10%;
+@media (max-width: 640px) {
+   width: 8vw;
+}
+
+@media (min-width: 1024px) {
+   width: 7vw;
 }
 `
 
 const Main = styled.div`
 border: 2px solid ${props => props.theme.text};
 color: ${props => props.theme.text};
-padding: 2rem;
-width: 50%;
-min-height: 60vh;
-z-index: 2;
+padding: 1.5rem;
+width: 60%;
+min-height: 50vh;
+z-index: 1;
 line-height: 1.5;
-overflow: auto;
+overflow: hidden;
 
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: calc(0.6rem + 1vw);
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+place-items: center;
+gap: 2rem;
+font-size: calc(0.8rem + 1vw);
 backdrop-filter: blur(4px);
 
 position: absolute;
-left: calc(7rem + 5vw);
-top: 10rem;
+left: calc(2rem + 5vw);
+top: 9rem;
 font-family: 'Ubuntu Mono', monospace;
 font-style: italic;
 
-@media (max-width: 768px) {
-   width: 55%;
-   font-size: calc(0.7rem + .8vw);
+@media (max-width: 640px) {
+   font-size: calc(.6rem + .8vw);
+   border: 1px solid ${props => props.theme.text};
+   width: 65%;
+   min-height: 50vh;
    padding: 1rem;
-   top: 6rem;
-   left: calc(4rem + 3vw);
+   top: 5.5rem;
+   left: calc(2.8rem + 2vw);
 }
-`
 
-const Piano = styled.div`
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-position: absolute;
-top: 5%;
-left: 0;
-width: 90vw;
-height: 40vh;
-z-index: -1;
-filter: blur(3px);
-
-@media (max-width: 768px) {
-   position: absolute;
-   top: 40rem;
-   right: 70rem;
-   border: 1px solid red;
+@media (min-width: 1024px) {
+   font-size: calc(0.5rem + .9vw);
+   border: 1px solid ${props => props.theme.text};
+   width: 60%;
+   min-height: 50vh;
+   padding: 1rem;
+   top: 9rem;
+   left: calc(2.6rem + 3vw);
 }
 `
 
@@ -99,6 +101,7 @@ const AboutPage = () => {
       <ThemeProvider theme={darkTheme} >
 
          <LogoComponent theme='dark' />
+         <NavigationMenuIcons theme='dark' />
          <SocialIcons theme='dark' />
          <PowerButton />
          <Box>
@@ -108,22 +111,20 @@ const AboutPage = () => {
             </King>
 
             <Main>
-               Hi, I'm Dogukan. I'm 27 and self-taught Frontend Developer.
-               <br /> <br />
-               I graduated from Metallurgical & Materials Engineering. Unless I don't want to follow that path and quit from my job.
-               <br /> <br />
-               Becoming a programmer has always been my dream job. Therefore, my new journey started... I have been working on it with passion, curiosity and a strong will.
-               <br /> <br />
-               I'm interested in the whole frontend stack like trying new things and building great projects.
-               <br /> <br />
-               I like to play piano and guitar. Playing chess is also makes me feel good and calm.
+               <div>
+                  Hi, I'm Dogukan. I'm 27 and self-taught Frontend Developer.
+                  <br /> <br />
+                  I graduated from Metallurgical & Materials Engineering. Unless I don't want to follow that path and quit from my job.
+                  <br /> <br />
+                  Becoming a programmer has always been my dream job. Therefore, my new journey started... I have been working on it with passion, curiosity and a strong will.
+                  <br /> <br />
+                  I'm interested in the whole frontend stack like trying new things and building great projects.
+                  <br /> <br />
+                  I like to play piano and guitar. Playing chess is also makes me feel good and calm.
+               </div>
             </Main>
 
             <BigTitle text="ABOUT" top='5%' left='5%' />
-
-            <Piano>
-               <img src={piano} alt="Piano" />
-            </Piano>
 
          </Box>
 

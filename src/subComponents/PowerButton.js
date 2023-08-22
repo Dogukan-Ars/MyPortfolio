@@ -7,16 +7,16 @@ import { NavLink } from 'react-router-dom'
 
 const Power = styled.button`
 position: fixed;
-top: 2rem;
+top: 1.5rem;
 left: 50%;
 transform: translate(-50%, 0);
 
 background-color: #FCF6F4;
-padding: 0.3rem;
+padding: 0.25rem;
 border-radius: 50%;
 border: 1px solid #000;
-width: 2.7rem;
-height: 2.7rem;
+width: 2.2rem;
+height: 2.2rem;
 
 display: flex;
 justify-content: center;
@@ -39,20 +39,23 @@ cursor: pointer;
    height: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
    width: 1.6rem;
    height: 1.6rem;
    padding: 0.2rem;
    top: 1rem;
    
    &>*:last-child{
-      position: fixed;
-      top: 1px;
-      left: 50%;
-      transform: translate(-50%, 0);
       width: 1.2rem;
       height: 1.2rem;
    }
+}
+
+@media (min-width: 1024px) {
+   width: 2.7rem;
+   height: 2.7rem;
+   padding: 0.3rem;
+   top: 2rem;
 }
 `
 

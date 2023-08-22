@@ -10,21 +10,28 @@ import PowerButton from '../subComponents/PowerButton'
 import Card from '../subComponents/Card'
 import BigTitle from '../subComponents/BigTitle'
 import BackgroundImage from "../assets/Images/TrustMe.png"
+import NavigationMenuIcons from '../subComponents/NavigationMenuIcons'
 
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
 background-image: url(${BackgroundImage});
+background-repeat: repeat;
+background-size: 2000px;
 height: 400vh;
 position: relative;
 display: flex;
 flex-direction: column;
 align-items: center;
+
+@media (max-width: 640px) {
+   background-image: url(...);
+}
 `
 
 const Main = styled(motion.ul)`
 position: fixed;
-top: 12rem;
+top: 11rem;
 left: calc(10rem + 15vw);
 height: 45vh;
 display: flex;
@@ -32,15 +39,38 @@ justify-content: center;
 align-items: center;
 color: white;
 z-index: 1;
+
+@media (max-width: 640px) {
+   top: 9rem;
+}
 `
 
 const Rotate = styled.span`
 position: fixed;
 right: 1rem;
-bottom: 1rem;
-width: 80px;
-height: 80px;
+bottom: 1.5rem;
+width: 45px;
+height: 45px;
 z-index: 1;
+
+@media (max-width: 640px) {
+   bottom: 1rem;
+   width: 30px;
+   height: 30px;
+   
+   &>*:first-child {
+      width: 100%;
+   }
+}
+
+@media (min-width: 1024px) {
+   width: 60px;
+   height: 60px;
+
+   &>*:first-child {
+      width: 100%;
+   }
+}
 `
 
 // Framer-motion Configuration
@@ -59,14 +89,14 @@ const container = {
 
 const ProjectPage = () => {
    const ref = useRef(null);
-   const yingyang = useRef(null);
+   const yinyang = useRef(null);
 
    useEffect(() => {
       let element = ref.current;
 
       const rotate = () => {
          element.style.transform = `translateX(${-window.scrollY}px)`
-         yingyang.current.style.transform = `rotate(${-window.scrollY}deg)`
+         yinyang.current.style.transform = `rotate(${-window.scrollY}deg)`
       }
 
       window.addEventListener('scroll', rotate)
@@ -78,11 +108,11 @@ const ProjectPage = () => {
 
    return (
       <ThemeProvider theme={darkTheme} >
+         <LogoComponent theme='dark' />
+         <NavigationMenuIcons theme='dark' />
+         <SocialIcons theme='dark' />
+         <PowerButton />
          <Box>
-
-            <LogoComponent theme='dark' />
-            <SocialIcons theme='dark' />
-            <PowerButton />
 
             <Main ref={ref} variants={container} initial='hidden' animate='show' >
                {
@@ -92,11 +122,11 @@ const ProjectPage = () => {
                }
             </Main>
 
-            <Rotate ref={yingyang}>
-               <YinYang width={80} height={80} fill={darkTheme.text} />
+            <Rotate ref={yinyang}>
+               <YinYang fill={darkTheme.text} />
             </Rotate>
 
-            <BigTitle text="PROJECT" top='10%' right='20%' />
+            <BigTitle text="PROJECT" top='5%' right='20%' />
          </Box>
       </ThemeProvider>
 

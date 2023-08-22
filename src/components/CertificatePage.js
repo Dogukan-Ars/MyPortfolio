@@ -8,40 +8,41 @@ import PowerButton from "../subComponents/PowerButton"
 import SocialIcons from "../subComponents/SocialIcons"
 import RopeComponent from "../subComponents/RopeComponent"
 import BigTitle from "../subComponents/BigTitle"
-import img from "../assets/Images/LifeCycle.jpg"
+import NavigationMenuIcons from "../subComponents/NavigationMenuIcons"
 
 const MainContainer = styled(motion.div)`
-background-image: url(${img});
 background-color: rgba(0, 0, 0, 0.5);
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;,
 `
 
-
 const Container = styled.div`
 background-color: ${props => `rgba(${props.theme.bodyRgba},0.8)`};
 width: 100%;
 min-height: 100vh;
 position: relative;
-padding-bottom: 5rem;
 `
 
 const Center = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 10rem 2rem;
+padding: 5rem 2rem;
 
-@media (max-width: 768px) {
-   padding: 5rem 2rem;
+@media (max-width: 640px) {
+   padding: 3rem 2rem;
+}
+
+@media (min-width: 1024px) {
+   padding: 8rem 2rem;
 }
 `
 
 const Grid = styled.div`
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(calc(10rem + 15vw), 1fr));
-grid-gap: calc(1rem + 2vw);
+grid-gap: calc(.7rem + 1vw);
 z-index: 2;
 `
 
@@ -80,6 +81,7 @@ const CertificatePage = () => {
       >
          <Container>
             <LogoComponent />
+            <NavigationMenuIcons theme='light' />
             <PowerButton />
             <SocialIcons />
             <RopeComponent numbers={numbers} />
@@ -94,7 +96,7 @@ const CertificatePage = () => {
                </Grid>
             </Center>
 
-            <BigTitle text="CERTIFICATE" top='5rem' left='5rem' />
+            <BigTitle text="CERTIFICATE" top='3rem' left='5rem' />
          </Container>
       </MainContainer>
    )

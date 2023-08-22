@@ -10,25 +10,54 @@ position: relative;
 const Slider = styled.div`
 position: fixed;
 top: 0;
-right: 1.5rem;
+right: -1rem;
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 transform: translateY(-100%);
 
-@media (max-width: 768px) {
-   right: 0.5rem; /* Adjust right position for smaller screens */
+&>*:last-child {
+   width: 130px;
+   height: 130px;
+}
+
+@media (max-width: 640px) {
+   right: -1.5rem;
+   &>*:last-child {
+      width: 120px;
+      height: 120px;
+   }
+}
+
+@media (min-width: 1024px) {
+   right: -1rem;
+   &>*:last-child {
+      width: 140px;
+      height: 140px;
+   }
 }
 `
 
 const PreDisplay = styled.div`
-position: absolute;
+position: fixed;
 top: -2rem;
-right: 1.5rem;
+right: -1rem;
+width: 130px;
+height: 130px;
 
-@media (max-width: 768px) {
-   right: 0.5rem; /* Adjust right position for smaller screens */
+@media (max-width: 640px) {
+   top: -1.5rem;
+   right: -1.5rem;
+   width: 120px;
+   height: 120px;
+}
+
+@media (min-width: 1024px) {
+   top: -2rem;
+   right: -1rem;
+   width: 140px;
+   height: 140px;
 }
 `
 
@@ -65,15 +94,15 @@ const TasselComponent = (props) => {
    return (
       <Container>
          <PreDisplay ref={hiddenRef} className='hidden'>
-            <Tassel width={130} height={130} fill='currentColor' />
+            <Tassel fill='currentColor' />
          </PreDisplay>
          <Slider ref={ref}>
             {
                [...Array(props.numbers)].map((x, id) => {
-                  return <Rope key={id} width={120} height={120} style={{ transform: "rotateX(120deg)", margin: "-2.57rem 0"}} fill='currentColor' className="Tassel" />
+                  return <Rope key={id} width={120} height={120} style={{ transform: "rotateX(120deg)", margin: "-2.57rem 0" }} fill='currentColor' className="Tassel" />
                })
             }
-            <Tassel width={130} height={130} fill='currentColor' style={{ marginTop: "-1.3rem", marginLeft: ".6rem"}} />
+            <Tassel fill='currentColor' style={{ marginTop: "-1.3rem", marginLeft: ".6rem" }} />
          </Slider>
       </Container>
    )
