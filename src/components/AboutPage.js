@@ -12,7 +12,7 @@ const Box = styled.div`
 background-color: ${props => props.theme.body};
 background-size: cover;
 width: 100vw;
-min-height: 110vh;
+min-height: 120vh;
 overflow: hidden;
 z-index: -1;
 
@@ -66,12 +66,12 @@ display: grid;
 grid-template-columns: repeat(1, 1fr);
 place-items: center;
 gap: 2rem;
-font-size: calc(0.8rem + 1vw);
+font-size: calc(0.6rem + 1vw);
 backdrop-filter: blur(4px);
 
 position: absolute;
-left: calc(2rem + 5vw);
-top: 9rem;
+left: calc(2rem + 7vw);
+top: 6rem;
 font-family: 'Ubuntu Mono', monospace;
 font-style: italic;
 
@@ -86,13 +86,13 @@ font-style: italic;
 }
 
 @media (min-width: 1024px) {
-   font-size: calc(0.5rem + .9vw);
+   font-size: calc(0.6rem + .9vw);
    border: 1px solid ${props => props.theme.text};
    width: 60%;
    min-height: 50vh;
    padding: 1rem;
    top: 9rem;
-   left: calc(2.6rem + 3vw);
+   left: calc(3rem + 7vw);
 }
 `
 
@@ -116,9 +116,11 @@ const AboutPage = () => {
                   <br /> <br />
                   I graduated from Metallurgical & Materials Engineering. Unless I don't want to follow that path and quit from my job.
                   <br /> <br />
-                  Becoming a programmer has always been my dream job. Therefore, my new journey started... I have been working on it with passion, curiosity and a strong will.
+                  I have always been into games when I was a child. I wanted to build my own game someday. So I decided to become a software developer in that moment.
                   <br /> <br />
-                  I'm interested in the whole frontend stack like trying new things and building great projects.
+                  Therefore, my new journey started... I have been working on it with passion, curiosity and a strong will.
+                  <br /> <br />
+                  I'm specifically interested in game development and the whole frontend stack like trying new things and building great projects.
                   <br /> <br />
                   I like to play piano and guitar. Playing chess is also makes me feel good and calm.
                </div>

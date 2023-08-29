@@ -21,7 +21,7 @@ export const Certificate = [
         link: "https://www.freecodecamp.org/certification/Drynwhyl/javascript-algorithms-and-data-structures"
     },
     {
-        id: 2,
+        id: 3,
         name: "Beginner Frontend Web Development Path",
         tags: ["git", "html", "css", "bootstrap","javaScript", "dataStructures&algorithms"],
         date: "5 July, 2021",
@@ -29,7 +29,7 @@ export const Certificate = [
         link: "https://patika-prod.s3.eu-central-1.amazonaws.com/certificates/fd9c0b53"
     },
     {
-        id: 3,
+        id: 4,
         name: "Web Development with HTML5",
         tags: ["html", "css"],
         date: "6 July, 2021",
@@ -37,7 +37,7 @@ export const Certificate = [
         link: "https://www.btkakademi.gov.tr/portal"
     },
     {
-        id: 4,
+        id: 5,
         name: "Advanced Level Java",
         tags: ["java", "oop", "spring", "hibernate", "maven"],
         date: "26 May, 2021",

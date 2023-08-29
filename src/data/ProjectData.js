@@ -54,6 +54,15 @@ export const Project = [
     },
     {
         id: 6,
+        name: "Shopping List App",
+        description: "It built with JavaScript and Firebase. Add, delete and update functions sending and fetching data to Firebase.",
+        tags: ["html", "css", "javascript", "firebase"],
+        img: shoplist,
+        demo: "https://dogu-shopping-list.netlify.app/",
+        github: "https://github.com/Drynwhyll/Javascript-PortfolioProject"
+    },
+    {
+        id: 7,
         name: "Getir Clone Web Page",
         description: "It built with React and Tailwind.",
         tags: ["react", "tailwindcss", "react-components"],

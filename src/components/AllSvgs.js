@@ -135,8 +135,6 @@ export const Tassel = (props) => {
    )
 }
 
-
-
 export const Rope = (props) => {
    return (
       <svg
@@ -158,8 +156,6 @@ export const Rope = (props) => {
    )
 }
 
-
-
 export const Design = (props) => {
    return (
       <svg
@@ -177,7 +173,6 @@ export const Design = (props) => {
          />
       </svg>
    )
-
 }
 
 export const Develope = (props) => {

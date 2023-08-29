@@ -6,10 +6,10 @@ import Jquery from "../assets/Images/Jquery-150.png"
 import Javascript from "../assets/Images/Javascript-150.png"
 import Typescript from "../assets/Images/Typescript-150.png"
 import Java from "../assets/Images/Java-150.png"
+import C from "../assets/Images/C-150.png"
 import Git from "../assets/Images/Git-150.png"
 import Figma from "../assets/Images/Figma-150.png"
 import React from "../assets/Images/React-150.png"
-import VsCode from "../assets/Images/Vs-code-150.png"
 
 export const Icon = [
    {
@@ -59,17 +59,17 @@ export const Icon = [
    },
    {
       id: 10,
+      name: "C#",
+      imgSrc: C
+   },
+   {
+      id: 11,
       name: "GIT",
       imgSrc: Git
    },
    {
-      id: 11,
+      id: 12,
       name: "Figma",
       imgSrc: Figma
-   },
-   {
-      id: 12,
-      name: "VS Code",
-      imgSrc: VsCode
    },
 ]
