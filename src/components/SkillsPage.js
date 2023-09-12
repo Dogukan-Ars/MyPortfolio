@@ -195,11 +195,15 @@ z-index: 1;
 }
 
 @media (min-width: 1024px) {
-   font-size: calc(0.8em + 1vw);
+   font-size: calc(0.6em + .8vw);
    &>*:nth-child(n) {
       width: 10vw;
       height: 10vh;
    }
+   &>*:nth-child(n) > img {
+   width: 60px;
+   height: 60px;
+}
 }
 `
 
