@@ -159,8 +159,8 @@ const IconBox = styled(motion.div)`
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 place-items: center;
-margin-top: 40px;
-font-size: calc(0.5em + .8vw);
+margin-top: 35px;
+font-size: calc(0.4em + .7vw);
 z-index: 1;
 
 
@@ -168,13 +168,13 @@ z-index: 1;
    margin-right: .8rem;
    width: 7vw;
    height: 7vh;
-   margin-bottom: 40px;
+   margin-bottom: 30px;
    text-align: center;
 }
 
 &>*:nth-child(n) > img {
-   width: 50px;
-   height: 50px;
+   width: 45px;
+   height: 45px;
 }
 
 @media (max-width: 640px) {
@@ -183,9 +183,9 @@ z-index: 1;
 
    &>*:nth-child(n) {
       margin-right: 1.2rem;
-      width: 4vw;
-      height: 4vh;
-      margin-bottom: 20px;
+      width: 5.5vw;
+      height: 5.5vh;
+      margin-bottom: 10px;
       text-align: center;
    }
    &>*:nth-child(n) > img {
@@ -231,12 +231,12 @@ const SkillsPage = () => {
                   <Description>
                      <strong>Skills</strong>
                      <p>
-                        HTML, CSS, JavaScript, TypeScript, React, Redux, SASS, Bootstrap, jQuery, Java
+                        HTML, CSS, JavaScript, TypeScript, React, Redux, SASS, Tailwind, Bootstrap, jQuery, Java, C#, Unity
                      </p>
                   </Description>
                   <Description>
                      <strong>Tools</strong>
-                     <p>GIT, VS Code</p>
+                     <p>GIT, VS, VS Code</p>
                   </Description>
                </motion.div>
             </Main>

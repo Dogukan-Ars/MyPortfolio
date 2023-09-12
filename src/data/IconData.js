@@ -1,11 +1,14 @@
 import Html from "../assets/Images/Html-5-150.png"
 import Css from "../assets/Images/Css-150.png"
 import Bootstrap from "../assets/Images/Bootstrap-150.png"
+import Tailwind from "../assets/Images/Tailwind-css-150.png"
 import Sass from "../assets/Images/Sass-150.png"
 import Jquery from "../assets/Images/Jquery-150.png"
 import Javascript from "../assets/Images/Javascript-150.png"
 import Typescript from "../assets/Images/Typescript-150.png"
 import Java from "../assets/Images/Java-150.png"
+import C from "../assets/Images/C-sharp-logo-150.png"
+import Unity from "../assets/Images/Unity-150.png"
 import Git from "../assets/Images/Git-150.png"
 import Figma from "../assets/Images/Figma-150.png"
 import React from "../assets/Images/React-150.png"
@@ -29,46 +32,61 @@ export const Icon = [
    },
    {
       id: 4,
+      name: "Tailwind",
+      imgSrc: Tailwind
+   },
+   {
+      id: 5,
       name: "SASS",
       imgSrc: Sass
    },
    {
-      id: 5,
+      id: 6,
       name: "jQuery",
       imgSrc: Jquery
    },
    {
-      id: 6,
+      id: 7,
       name: "JavaScript",
       imgSrc: Javascript
    },
    {
-      id: 7,
+      id: 8,
       name: "TypeScript",
       imgSrc: Typescript
    },
    {
-      id: 8,
+      id: 9,
       name: "React",
       imgSrc: React
    },
    {
-      id: 9,
+      id: 10,
       name: "Java",
       imgSrc: Java
    },
    {
-      id: 10,
+      id: 11,
+      name: "C#",
+      imgSrc: C
+   },
+   {
+      id: 12,
+      name: "Unity",
+      imgSrc: Unity
+   },
+   {
+      id: 13,
       name: "GIT",
       imgSrc: Git
    },
    {
-      id: 11,
+      id: 14,
       name: "Figma",
       imgSrc: Figma
    },
    {
-      id: 12,
+      id: 15,
       name: "VS Code",
       imgSrc: VsCode
    },

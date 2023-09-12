@@ -4,6 +4,8 @@ import drummac from "../assets/Images/DrumMachine.png"
 import toDo from "../assets/Images/ToDo.png"
 import shoplist from "../assets/Images/ShoppingList.png"
 import getir from "../assets/Images/Getir-Clone.png"
+import cubic from "../assets/Images/CubicDemo.png"
+import fakelappy from "../assets/Images/FakelappyBirdDemo.png"
 
 export const Project = [
     {
@@ -60,5 +62,23 @@ export const Project = [
         img: getir,
         demo: "https://dogu-getir-clone.netlify.app/",
         github: "https://github.com/Drynwhyll/Getir-Clone"
+    },
+    {
+        id: 7,
+        name: "Fakelappy Bird",
+        description: "It built with Unity and C#.",
+        tags: ["unity", "c#"],
+        img: fakelappy,
+        demo: "https://fakelappy-bird-game.netlify.app/",
+        github: "https://github.com/Drynwhyll/FakelappyBird"
+    },
+    {
+        id: 8,
+        name: "Cubic Game",
+        description: "It built with Unity and C#.",
+        tags: ["unity", "c#"],
+        img: cubic,
+        demo: "https://cubic-game.netlify.app/",
+        github: "https://github.com/Drynwhyll/CubicGame"
     },
 ] 

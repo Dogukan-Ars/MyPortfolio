@@ -116,9 +116,11 @@ const AboutPage = () => {
                   <br /> <br />
                   I graduated from Metallurgical & Materials Engineering. Unless I don't want to follow that path and quit from my job.
                   <br /> <br />
-                  Becoming a programmer has always been my dream job. Therefore, my new journey started... I have been working on it with passion, curiosity and a strong will.
+                  I have always been into games when I was a child. I wanted to build my own game someday. So I decided to become a software developer in that moment.
                   <br /> <br />
-                  I'm interested in the whole frontend stack like trying new things and building great projects.
+                  Therefore, my new journey started... I have been working on it with passion, curiosity and a strong will.
+                  <br /> <br />
+                  I'm specifically interested in game development and the whole frontend stack like trying new things and building great projects.
                   <br /> <br />
                   I like to play piano and guitar. Playing chess is also makes me feel good and calm.
                </div>

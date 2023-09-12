@@ -78,10 +78,10 @@ const TasselComponent = (props) => {
 
          ref.current.style.transform = `translateY(${-diffP}%)`
 
-         if (window.scrollY > 5) {
-            hiddenRef.current.style.dsplay = 'none'
+         if (window.scrollY > 30) {
+            hiddenRef.current.style.display = 'none'
          } else {
-            hiddenRef.current.style.dsplay = 'block'
+            hiddenRef.current.style.display = 'block'
          }
       }
 

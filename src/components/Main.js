@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { keyframes, styled } from 'styled-components'
 import { YinYang } from './AllSvgs'
-import PowerButton from '../subComponents/PowerButton'
 import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons from '../subComponents/SocialIcons'
 import Intro from './Intro'
@@ -23,7 +22,8 @@ h2,h3,h4,h5,h6 {
 `
 
 const Container = styled.div`
-padding: 2rem;`
+padding: 2rem;
+`
 
 const rotate = keyframes`
 from {
@@ -31,6 +31,24 @@ from {
 }
 to {
    transform: rotate(360deg);
+}
+`
+
+const breathing = keyframes`
+0% {
+   transform: scale(0.9);
+}
+
+25% {
+   transform: scale(1);
+}
+
+60% {
+   transform: scale(0.9);
+}
+
+100% {
+   transform: scale(0.9);
 }
 `
 
@@ -56,7 +74,8 @@ transition: all 1s ease;
 
 &>:last-child {
    display: ${props => props.click ? "none" : "inline-block"};
-   padding-top: 1rem;
+   animation: ${breathing} 4s ease-in-out infinite;
+   padding-top: .7rem;
 }
 
 @media (max-width: 640px) {
@@ -96,7 +115,6 @@ const Main = () => {
       <MainContainer >
          <DarkDiv click={click} />
          <Container>
-            <PowerButton />
             <LogoComponent theme={click ? 'dark' : 'light'} />
             <SocialIcons theme={click ? 'dark' : 'light'} />
             <NavigationMenuIcons theme={click ? 'dark' : 'light'} />
