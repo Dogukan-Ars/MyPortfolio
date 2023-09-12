@@ -18,7 +18,7 @@ background-color: ${props => props.theme.body};
 background-image: url(${BackgroundImage});
 background-repeat: repeat;
 background-size: 2000px;
-height: 500vh;
+height: 600vh;
 position: relative;
 display: flex;
 flex-direction: column;

@@ -53,4 +53,4 @@ export const Certificate = [
         imgSrc: java,
         link: java
     },
-] 
+]
