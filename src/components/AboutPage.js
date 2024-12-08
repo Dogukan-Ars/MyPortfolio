@@ -112,17 +112,17 @@ const AboutPage = () => {
 
             <Main>
                <div>
-                  Hi, I'm Dogukan. I'm 27 and self-taught Frontend Developer.
+                  Hi, I'm Dogukan. I'm 28 and a self-taught front-end developer.
                   <br /> <br />
-                  I graduated from Metallurgical & Materials Engineering. Unless I don't want to follow that path and quit from my job.
+                  I graduated from Metallurgical & Materials Engineering.
                   <br /> <br />
-                  I have always been into games when I was a child. I wanted to build my own game someday. So I decided to become a software developer in that moment.
+                  I've always been into games when I was a child, and I wanted to build my own game someday. So I decided to become a software developer at that moment.
                   <br /> <br />
-                  Therefore, my new journey started... I have been working on it with passion, curiosity and a strong will.
+                  Therefore, my new journey started... I have been working on it with passion, curiosity, and a strong will.
                   <br /> <br />
-                  I'm specifically interested in game development and the whole frontend stack like trying new things and building great projects.
+                  I start my journey with frontend development, but I also enjoy creating games and exploring new opportunities while building great projects.
                   <br /> <br />
-                  I like to play piano and guitar. Playing chess is also makes me feel good and calm.
+                  I like to play chess. Also playing piano and guitar makes me feel good.
                </div>
             </Main>
 
